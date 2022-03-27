@@ -1,0 +1,83 @@
+
+<h2>Listado de usuarios registrados</h2>
+<hr>
+
+<div class="col-md-12 border">
+    <div class="row ms-2 me-2 mt-2">
+        <div class="row mb-3">
+            <label for="inputFilter" class="col-sm-2 col-form-label">
+                <h3><b>Buscar</b></h3>
+            </label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputFilter" placeholder="Ingresar RUT o nombre" (keyup)="filterData($event.target)">
+            </div>
+        </div>
+    </div>
+    <table mat-table [dataSource]="dataSource">
+        <!-- Position Column -->
+        <ng-container matColumnDef="rut">
+        <th mat-header-cell *matHeaderCellDef> RUT </th>
+        <td mat-cell *matCellDef="let patient"> {{patient.rut}} </td>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="names">
+        <th mat-header-cell *matHeaderCellDef> Nombres </th>
+        <td mat-cell *matCellDef="let patient"> {{patient.names}} </td>
+        </ng-container>
+    
+        <!-- Weight Column -->
+        <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef> Teléfono </th>
+        <td mat-cell *matCellDef="let patient"> +56 {{patient.phone}} </td>
+        </ng-container>
+    
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="sector">
+        <th mat-header-cell *matHeaderCellDef> Sector </th>
+        <td mat-cell *matCellDef="let patient"> {{patient.sector.name}} </td>
+        </ng-container>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="options">
+            <th mat-header-cell *matHeaderCellDef> Opciones </th>
+            <td mat-cell *matCellDef="let patient">
+                <button class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#resumeView"> <i class="fa-solid fa-address-card"></i> </button>
+                <a routerLink="/fichaclinica/rut/{{patient.rut}}" class="btn btn-primary m-2"> <i class="fa-solid fa-file-lines"></i> </a>
+            </td>
+            </ng-container>
+        
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="9999">
+              Actualmente no hay datos
+            </td>
+          </tr>
+    </table>
+    
+    <mat-paginator [pageSizeOptions]="[10, 15, 20, 25]"
+                    showFirstLastButtons 
+                    aria-label="Select page of patient">
+    </mat-paginator>
+</div>
+
+  
+
+<!-- Resume view -->
+<div class="modal fade" id="resumeView" tabindex="-1" aria-labelledby="resumeViewLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="resumeViewLabel">Vista Rápida</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-resume-record></app-resume-record>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+}
+.fa-solid {
+    font-size: 25px;
+}
+.fa-square-check {
+    color: green;
+}
+.fa-square-xmark {
+    color: red;
+}
+.title-section {
+    background-color: #084474 !important;
+    color: white;
+}
