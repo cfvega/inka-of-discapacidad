@@ -10,6 +10,9 @@ import { RecordComponent } from './record/record.component';
 import { NewComponent } from './new/new.component';
 import { ComponentsModule } from '../components/components.module';
 
+import {ChipsModule} from 'primeng/chips';
+
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { ComponentsModule } from '../components/components.module';
     ClinicalRecordsRoutingModule,
     MatTableModule,
     MatPaginatorModule,
-    ComponentsModule
+    ComponentsModule,
+    ChipsModule
   ]
 })
 export class ClinicalRecordsModule { }

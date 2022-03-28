@@ -7,3 +7,8 @@
     bottom: 0 !important;
     z-index: 100000;
 }
+.author {
+    font-size: 8px; 
+    padding-left: 1px;
+    font-weight: bold;
+}

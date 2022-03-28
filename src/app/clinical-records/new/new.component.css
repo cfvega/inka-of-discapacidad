@@ -1,0 +1,12 @@
+.title {
+    background-color: #084474;
+    color: white;
+    text-transform: uppercase;
+}
+.row {
+    padding: 4px;
+}
+.fa-circle-chevron-left {
+    font-size: 40px;
+    color: #084474;
+}
