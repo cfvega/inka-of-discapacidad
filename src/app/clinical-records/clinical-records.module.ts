@@ -11,7 +11,8 @@ import { NewComponent } from './new/new.component';
 import { ComponentsModule } from '../components/components.module';
 
 import {ChipsModule} from 'primeng/chips';
-
+import {KnobModule} from 'primeng/knob';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,7 +27,10 @@ import {ChipsModule} from 'primeng/chips';
     MatTableModule,
     MatPaginatorModule,
     ComponentsModule,
-    ChipsModule
+    ChipsModule,
+    KnobModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class ClinicalRecordsModule { }

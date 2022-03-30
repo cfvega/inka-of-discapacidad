@@ -13,20 +13,20 @@
            
             <!-- Name Column -->
             <ng-container matColumnDef="prof">
-            <th mat-header-cell *matHeaderCellDef width="20%"> Profesional </th>
-            <td mat-cell *matCellDef="let observations"> {{observations.names}} </td>
+            <th mat-header-cell *matHeaderCellDef width="20%" class="title-table"> Profesional </th>
+            <td mat-cell *matCellDef="let observations"> {{observations.profesional.names}} </td>
             </ng-container>
         
             <!-- Weight Column -->
             <ng-container matColumnDef="date">
-            <th mat-header-cell *matHeaderCellDef width="15%"> Fecha </th>
-            <td mat-cell *matCellDef="let observations"> +56 {{observations.phone}} </td>
+            <th mat-header-cell *matHeaderCellDef width="15%" class="title-table"> Fecha </th>
+            <td mat-cell *matCellDef="let observations"> {{observations.date | date: 'dd-MM-yyyy HH:mm:ss'}} </td>
             </ng-container>
         
             <!-- Symbol Column -->
             <ng-container matColumnDef="obs">
-            <th mat-header-cell *matHeaderCellDef> Observación </th>
-            <td mat-cell *matCellDef="let observations"> {{observations}} </td>
+            <th mat-header-cell *matHeaderCellDef class="title-table"> Observación </th>
+            <td mat-cell *matCellDef="let observations"> {{observations.comments}} </td>
             </ng-container>
             
   
@@ -39,11 +39,11 @@
               </tr>
         </table>
         
-        <mat-paginator [pageSizeOptions]="[10, 15, 20, 25]"
+        <mat-paginator [pageSizeOptions]="[5,10, 15, 20, 25]"
                         showFirstLastButtons 
                         aria-label="Select page of patient">
         </mat-paginator>
-          <table class="table">
+          <!-- <table class="table">
             <thead>
               <tr>
                 <th>Profesional</th>
@@ -63,11 +63,7 @@
                 <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsa veniam aliquid at itaque laudantium enim pariatur corrupti possimus odio voluptates saepe sequi, debitis nulla amet illo cum consequuntur dolores?</td>
               </tr>
             </tbody>
-          </table>
-          
-          <!-- <p><b>Grado Discapacidad</b>: Total</p>
-          <p><b>Lugar Atención</b>: Hospital Pichidegua</p>
-          <p><b>Diagnostico</b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error assumenda modi, officiis quas nobis iure quos quia facere quaerat eaque doloremque ex id totam in aperiam vitae fugiat quae.</p> -->
+          </table> -->
         </div>
       </div>
     </div>
@@ -81,18 +77,18 @@
       <div id="flush-collapseHealth" class="accordion-collapse collapse" aria-labelledby="flush-headingHealth" data-bs-parent="#accordionFlushExample">
        
         <div class="accordion-body">
-          <table class="table table-hover table-bordered">
+          <table class="table table-bordered">
             <tbody>
               <tr>
-                <td width="20%"><b>Tipo Discapacidad</b></td>
+                <td width="20%" class="title-table"><b>Tipo Discapacidad</b></td>
                 <td>lallalala</td>
               </tr>
               <tr>
-                <td><b>Grado Discapacidad</b></td>
+                <td class="title-table"><b>Grado Discapacidad</b></td>
                 <td> Total</td>
               </tr>
               <tr>
-                <td><b>Centro atención</b></td>
+                <td class="title-table"><b>Centro atención</b></td>
                 <td>Hospital de Pichidegua</td>
               </tr>
               <tr>
@@ -116,18 +112,18 @@
       </h2>
       <div id="flush-collapseSocial" class="accordion-collapse collapse" aria-labelledby="flush-headingSocial" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
-          <table class="table table-hover table-bordered">
+          <table class="table table-bordered">
             <tbody>
               <tr>
-                <td width="20%"><b>RND</b></td>
+                <td width="20%" class="title-table"><b>RND</b></td>
                 <td>1234</td>
               </tr>
               <tr>
-                <td>RSH</td>
+                <td class="title-table">RSH</td>
                 <td>40%</td>
               </tr>
               <tr>
-                <td>¿Pensión por invalidez?</td>
+                <td class="title-table">¿Pensión por invalidez?</td>
                 <td><i class="fa-solid fa-square-xmark"></i></td>
               </tr>
             </tbody>
@@ -145,26 +141,26 @@
       </h2>
       <div id="flush-collapseSchool" class="accordion-collapse collapse" aria-labelledby="flush-headingSchool" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
-          <table class="table table-hover table-bordered">
+          <table class="table table-bordered">
             <tbody>
               <tr>
-                <td width="20%"><b>Estudia</b></td>
+                <td width="20%" class="title-table"><b>Estudia</b></td>
                 <td><i class="fa-solid fa-square-check"></i></td>
               </tr>
               <tr>
-                <td><b>Nivel de estudios</b></td>
+                <td class="title-table"><b>Nivel de estudios</b></td>
                 <td> 1 medio </td>
               </tr>
               <tr>
-                <td><b>Establecimiento</b></td>
+                <td class="title-table"><b>Establecimiento</b></td>
                 <td>LALALA</td>
               </tr>
               <tr>
-                <td><b>Tipo de Establecimiento</b></td>
+                <td class="title-table"><b>Tipo de Establecimiento</b></td>
                 <td> Publico </td>
               </tr>
               <tr>
-                <td><b>Ultimo curso aprobado</b></td>
+                <td class="title-table"><b>Ultimo curso aprobado</b></td>
                 <td>lalala</td>
               </tr>
             </tbody>
@@ -181,18 +177,18 @@
         </h2>
         <div id="flush-collapseWork" class="accordion-collapse collapse" aria-labelledby="flush-headingWork" data-bs-parent="#accordionFlushExample">
           <div class="accordion-body">
-            <table class="table table-hover table-bordered">
+            <table class="table table-bordered">
               <tbody>
                 <tr>
-                  <td width="20%"><b>Situación Actual</b></td>
+                  <td width="20%" class="title-table"><b>Situación Actual</b></td>
                   <td><i class="fa-solid fa-square-check"></i> - Trabajando</td>
                 </tr>
                 <tr>
-                  <td><b>Lugar de trabajo</b></td>
+                  <td class="title-table"><b>Lugar de trabajo</b></td>
                   <td>CUGAT</td>
                 </tr>
                 <tr>
-                  <td><b>Registrado en OMIL</b></td>
+                  <td class="title-table"><b>Registrado en OMIL</b></td>
                   <td><i class="fa-solid fa-square-check"></i></td>
                 </tr>
               </tbody>
@@ -209,22 +205,22 @@
       </h2>
       <div id="flush-collapseORG" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
-          <table class="table table-hover table-bordered">
+          <table class="table table-bordered">
             <tbody>
               <tr>
-                <td width="20%"><b>Nombre Agrupación PcD</b></td>
+                <td width="20%" class="title-table"><b>Nombre Agrupación PcD</b></td>
                 <td>NOMBRE</td>
               </tr>
               <tr>
-                <td><b>Cargo</b></td>
+                <td class="title-table"><b>Cargo</b></td>
                 <td>CARGO</td>
               </tr>
               <tr>
-                <td><b>Nombre Presidente</b></td>
+                <td class="title-table"><b>Nombre Presidente</b></td>
                 <td>PRESIDENTE</td>
               </tr>
               <tr>
-                <td><b>Contacto Presidente</b></td>
+                <td class="title-table"><b>Contacto Presidente</b></td>
                 <td> TELEFONO / CORREO</td>
               </tr>
             </tbody>
@@ -241,25 +237,25 @@
       </h2>
       <div id="flush-collapseTech" class="accordion-collapse collapse" aria-labelledby="flush-headingTech" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
-          <table class="table table-hover table-bordered">
+          <table class="table table-bordered">
             <tbody>
               <tr>
-                <td width="20%"><b>Tiene acceso a internet</b></td>
+                <td width="20%" class="title-table"><b>Tiene acceso a internet</b></td>
                 <td> <i class="fa-solid fa-square-check"></i> </td>
               </tr>
               <tr>
-                <td><b>Articulos tecnológicos</b></td>
+                <td class="title-table"><b>Articulos tecnológicos</b></td>
                 <td>
                   <span class="badge bg-primary me-1">Primary</span>
                   <span class="badge bg-primary">Primary</span>
                 </td>
               </tr>
               <tr>
-                <td><b>¿Requiere ayuda?</b></td>
+                <td class="title-table"><b>¿Requiere ayuda?</b></td>
                 <td> <i class="fa-solid fa-square-check"></i> </td>
               </tr>
               <tr>
-                <td> <b>Sabe utilizar</b> </td>
+                <td class="title-table"> <b>Sabe utilizar</b> </td>
                 <td> <i class="fa-solid fa-square-check"></i> </td>
               </tr>
             </tbody>

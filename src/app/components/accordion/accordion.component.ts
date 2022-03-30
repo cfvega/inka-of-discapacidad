@@ -13,6 +13,18 @@ export class AccordionComponent implements OnInit {
   displayedColumns: string[] = ['prof', 'date', 'obs'];
   dataSource = new MatTableDataSource();
 
+  dbObservations = [
+    { 
+      profesional: {
+        rut: '123456',
+        names: 'Juan 1 lala',
+        other: 'lalala'
+      },
+      comments: 'lalalalalalallalaal',
+      date: '2022-03-29T18:00:00'
+    }
+  ];
+
   @ViewChild(MatPaginator) set paginator(pager:MatPaginator) {
     if (pager) {
       this.dataSource.paginator = pager;
@@ -24,6 +36,8 @@ export class AccordionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.dataSource = new MatTableDataSource<any>(this.dbObservations);
+    this.dataSource.paginator = this.paginator;
   }
 
 }

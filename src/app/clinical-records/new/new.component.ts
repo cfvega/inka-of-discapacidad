@@ -12,8 +12,17 @@ export class NewComponent implements OnInit {
 
   viewRND = false;
   viewRSH = false;
-  userData = this.fb.group({
+  gradeValue: number =0;
 
+  healthForm = this.fb.group({
+    type: [],
+    grade: [10, []],
+    id_center: [],
+    diagnosis: []
+  })
+
+  userData = this.fb.group({
+ 
   });
 
   constructor(private route: ActivatedRoute,
@@ -33,6 +42,18 @@ export class NewComponent implements OnInit {
   }
   rsh(e:any) {
     this.viewRSH = e.checked;
+  }
+  updateControl(tmp:any=null) {
+    if(!tmp) {
+      (document.getElementById('inp_selector_grade') as HTMLInputElement).value = this.gradeValue.toString();
+    }
+    if(tmp) {
+      this.gradeValue = parseInt((document.getElementById('inp_selector_grade') as HTMLInputElement).value);
+
+    }
+    this.healthForm.controls['grade'].setValue(this.gradeValue);
+  }
+  updateKnob(){
   }
 
 }

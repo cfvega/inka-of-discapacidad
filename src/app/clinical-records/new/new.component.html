@@ -6,375 +6,383 @@
 
 
 </div>
-<div class="row">
-    <!-- IDENTIFICACIÓN -->
-    <h2 class="title p-2">Identificación</h2>
-    <div class="col-md-12 border p-2 mb-2">
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_rut">RUT</label>
-                <input type="text" id="inp_rut" class="form-control" placeholder="12345678-9">
+    <div class="row">
+        <!-- IDENTIFICACIÓN -->
+        <h2 class="title p-2">Identificación</h2>
+        <div class="col-md-12 border p-2 mb-2">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inp_rut">RUT</label>
+                    <input type="text" id="inp_rut" class="form-control" placeholder="12345678-9">
+                </div>
+                <div class="col-md-4">
+                    <label for="inp_sexo">Sexo</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radios_sexo" id="radio_male" value="option1" checked>
+                        <label class="form-check-label" for="radio_male">
+                          Masculino
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radios_sexo" id="radio_female" value="option2">
+                        <label class="form-check-label" for="radio_female">
+                          Femenino
+                        </label>
+                      </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <label for="inp_sexo">Sexo</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radios_sexo" id="radio_male" value="option1" checked>
-                    <label class="form-check-label" for="radio_male">
-                      Masculino
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radios_sexo" id="radio_female" value="option2">
-                    <label class="form-check-label" for="radio_female">
-                      Femenino
-                    </label>
-                  </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inp_names">Nombre(s)</label>
+                    <input type="text" id="inp_names" class="form-control" placeholder="Pablo">
+                </div>
+                <div class="col-md-4">
+                    <label for="inp_lastname_1">Apellido Paterno</label>
+                    <input type="text" id="inp_lastname_1" class="form-control" placeholder="Gutiérrez">
+                </div>
+                <div class="col-md-4">
+                    <label for="inp_lastname_2">Apellido Materno</label>
+                    <input type="text" id="inp_lastname_2" class="form-control" placeholder="Osorio">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inp_birthday">Fecha Nacimiento</label>
+                    <input type="date" id="inp_birthday" class="form-control" placeholder="Demo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inp_direcction">Dirección</label>
+                    <input type="text" id="inp_direcction" class="form-control" placeholder="Calle Falsa, #123">
+                </div>
+                <div class="col-md-4">
+                    <label for="inp_sector">Sector</label>
+                    <select id="inp_sector" class="form-select">
+                        <option value="0">Seleccione...</option>
+                        <option *ngFor="let s of sectors; let i index" value="{i+1}">{{s}}</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="inp_sector">Comuna</label>
+                    <select id="inp_sector" class="form-select">
+                        <option value="0">Seleccione...</option>
+                        <option *ngFor="let s of sectors; let i index" value="{i+1}">{{s}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inp_tel">Teléfono</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="addon-wrapping">+569</span>
+                        <input type="number" id="inp_tel" class="form-control" placeholder="12345678">
+                        <!-- <input type="text" id="in⁄putSearchbyRut" class="form-control"  formControlName="rut" placeholder="12345678-9" aria-label="RUT" aria-describedby="addon-wrapping"> -->
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="inp_email">Email</label>
+                    <input type="email" id="inp_email" class="form-control" placeholder="contacto@pichideguadigital.cl">
+                </div>
+    
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_names">Nombre(s)</label>
-                <input type="text" id="inp_names" class="form-control" placeholder="Pablo">
+        <!-- End IDENTIFICACIÓN -->
+        <!-- CUIDADORA -->
+        <h2 class="title p-2">Cuidadora</h2>
+        <div class="col-md-12 border p-2 mb-2">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inp_c_rut">RUT</label>
+                    <input type="text" id="inp_c_rut" class="form-control" placeholder="12345678-9">
+                </div>
+                <div class="col-md-4">
+                    <label for="inp_sexo">Sexo</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radios_c_sexo" id="radio_c_male" value="option1" checked>
+                        <label class="form-check-label" for="radio_c_male">
+                          Masculino
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radios_c_sexo" id="radio_c_female" value="option2">
+                        <label class="form-check-label" for="radio_c_female">
+                          Femenino
+                        </label>
+                      </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <label for="inp_lastname_1">Apellido Paterno</label>
-                <input type="text" id="inp_lastname_1" class="form-control" placeholder="Gutiérrez">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inp_c_names">Nombre(s)</label>
+                    <input type="text" id="inp_names" class="form-control" placeholder="La Mejor">
+                </div>
+                <div class="col-md-4">
+                    <label for="inp_c_lastname_1">Apellido Paterno</label>
+                    <input type="text" id="inp_c_lastname_1" class="form-control" placeholder="Cuidadora">
+                </div>
+                <div class="col-md-4">
+                    <label for="inp_lastname_2">Apellido Materno</label>
+                    <input type="text" id="inp_c_lastname_2" class="form-control" placeholder="Del Mundo">
+                </div>
             </div>
-            <div class="col-md-4">
-                <label for="inp_lastname_2">Apellido Materno</label>
-                <input type="text" id="inp_lastname_2" class="form-control" placeholder="Osorio">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inp_c_tel">Teléfono</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="addon-wrapping">+569</span>
+                        <input type="number" id="inp_c_tel" class="form-control" placeholder="12345678">
+                        <!-- <input type="text" id="in⁄putSearchbyRut" class="form-control"  formControlName="rut" placeholder="12345678-9" aria-label="RUT" aria-describedby="addon-wrapping"> -->
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="inp_c_email">Email</label>
+                    <input type="email" id="inp_c_email" class="form-control" placeholder="contacto@pichideguadigital.cl">
+                </div>
+    
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inp_c_rel">Relación con el usuario</label>
+                    <select id="inp_c_rel" class="form-select">
+                        <option value="0">Seleccione...</option>
+                        <option value="1">...</option>
+                    </select>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_birthday">Fecha Nacimiento</label>
-                <input type="date" id="inp_birthday" class="form-control" placeholder="Demo">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_direcction">Dirección</label>
-                <input type="text" id="inp_direcction" class="form-control" placeholder="Calle Falsa, #123">
-            </div>
-            <div class="col-md-4">
-                <label for="inp_sector">Sector</label>
-                <select id="inp_sector" class="form-select">
-                    <option value="0">Seleccione...</option>
-                    <option *ngFor="let s of sectors; let i index" value="{i+1}">{{s}}</option>
-                </select>
-            </div>
-            <div class="col-md-4">
-                <label for="inp_sector">Comuna</label>
-                <select id="inp_sector" class="form-select">
-                    <option value="0">Seleccione...</option>
-                    <option *ngFor="let s of sectors; let i index" value="{i+1}">{{s}}</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_tel">Teléfono</label>
-                <div class="input-group">
-                    <span class="input-group-text" id="addon-wrapping">+569</span>
-                    <input type="number" id="inp_tel" class="form-control" placeholder="12345678">
-                    <!-- <input type="text" id="in⁄putSearchbyRut" class="form-control"  formControlName="rut" placeholder="12345678-9" aria-label="RUT" aria-describedby="addon-wrapping"> -->
-                  </div>
-            </div>
-            <div class="col-md-4">
-                <label for="inp_email">Email</label>
-                <input type="email" id="inp_email" class="form-control" placeholder="contacto@pichideguadigital.cl">
-            </div>
+        <!-- End CUIDADORA -->
+        <!-- SALUD -->
+        <h2 class="title p-2">Salud</h2>
+        <div class="col-md-12 border p-2 mb-2">
+            <form [formGroup]="healthForm">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="inp_tipo_disc">Tipo Discapacidad</label>
+                        <select id="inp_tipo_disc" class="form-select">
+                            <option value="0">Seleccione ...</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
 
-        </div>
-    </div>
-    <!-- End IDENTIFICACIÓN -->
-    <!-- CUIDADORA -->
-    <h2 class="title p-2">Cuidadora</h2>
-    <div class="col-md-12 border p-2 mb-2">
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_c_rut">RUT</label>
-                <input type="text" id="inp_c_rut" class="form-control" placeholder="12345678-9">
-            </div>
-            <div class="col-md-4">
-                <label for="inp_sexo">Sexo</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radios_c_sexo" id="radio_c_male" value="option1" checked>
-                    <label class="form-check-label" for="radio_c_male">
-                      Masculino
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radios_c_sexo" id="radio_c_female" value="option2">
-                    <label class="form-check-label" for="radio_c_female">
-                      Femenino
-                    </label>
-                  </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_c_names">Nombre(s)</label>
-                <input type="text" id="inp_names" class="form-control" placeholder="La Mejor">
-            </div>
-            <div class="col-md-4">
-                <label for="inp_c_lastname_1">Apellido Paterno</label>
-                <input type="text" id="inp_c_lastname_1" class="form-control" placeholder="Cuidadora">
-            </div>
-            <div class="col-md-4">
-                <label for="inp_lastname_2">Apellido Materno</label>
-                <input type="text" id="inp_c_lastname_2" class="form-control" placeholder="Del Mundo">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_c_tel">Teléfono</label>
-                <div class="input-group">
-                    <span class="input-group-text" id="addon-wrapping">+569</span>
-                    <input type="number" id="inp_c_tel" class="form-control" placeholder="12345678">
-                    <!-- <input type="text" id="in⁄putSearchbyRut" class="form-control"  formControlName="rut" placeholder="12345678-9" aria-label="RUT" aria-describedby="addon-wrapping"> -->
-                  </div>
-            </div>
-            <div class="col-md-4">
-                <label for="inp_c_email">Email</label>
-                <input type="email" id="inp_c_email" class="form-control" placeholder="contacto@pichideguadigital.cl">
-            </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="inp_level_disc">Grado</label>
+                        <div class="row row-cols-lg-auto g-3 align-items-center">
+                            <p-knob [strokeWidth]="10" [(ngModel)]="gradeValue" (onChange)="updateControl()"></p-knob>
+                            <input id="inp_selector_grade" type="number" class="form-control w-25" (change)="updateControl($event.target)" formControlName="grade">
+                        </div>
+                    </div>
+                </div>
+            <form [formGroup]="healthForm">
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="inp_atten">Centro de Atención</label>
+                        <select id="inp_atten" class="form-select">
+                            <option value="0">Seleccione ...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="inp_diag">Diagnóstico</label>
+                        <textarea id="inp_diag" rows="4" class="form-control" placeholder="Ingrese Diagnóstico"></textarea>
+                    </div>
+                </div>
 
+            </form>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_c_rel">Relación con el usuario</label>
-                <select id="inp_c_rel" class="form-select">
-                    <option value="0">Seleccione...</option>
-                    <option value="1">...</option>
-                </select>
+        <!-- End SALUD -->
+        <!-- Social -->
+        <h2 class="title p-2">social</h2>
+        <div class="col-md-12 border p-2 mb-2">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkRND" (change)="rnd($event.target)">
+                        <label class="form-check-label" for="checkRND">
+                          ¿Tiene RND?
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkRSH" (change)="rsh($event.target)">
+                        <label class="form-check-label" for="checkRSH">
+                          ¿Tiene RSH?
+                        </label>
+                    </div>
+                </div>
             </div>
+            <div class="row">
+                <div class="col-md-4" *ngIf="viewRND">
+                    <label for="inp_rnd">Nro. Registro Nacional de Discapacidad</label>
+                    <input type="number" id="inp_rnd" class="form-control" placeholder="12345">
+                </div>
+                <div class="col-md-4" *ngIf="viewRSH">
+                    <label for="inp_rnd">% Registro Nacional de Hogares</label>
+                    <div class="input-group">
+                        <input type="number" id="inp_rnd" class="form-control" placeholder="15" min="0" max="100">
+                        <span class="input-group-text" id="addon-wrapping">%</span>
+                      </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkPension">
+                        <label class="form-check-label" for="checkPension">
+                          Pensión por invalidez
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End SOCIAL -->
+        <!-- EDUCACIÓN -->
+        <!-- TODO: Revisar -->
+        <h2 class="title p-2">educación</h2>
+        <div class="col-md-12 border p-2 mb-2">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-warning" role="alert">
+                        Si deja el campo en blanco, se asume que no se encuentra estudiando.
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkStudy">
+                        <label class="form-check-label" for="checkStudy">
+                          ¿Estudia?
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inp_level_study">Nivel de Estudio</label>
+                    <input type="text" id="inp_level_study" class="form-control" placeholder="Ingrese nivel de estudio del paciente">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inp_nomb_est">Nombre Establecimiento</label>
+                    <input type="text" id="inp_nomb_est" class="form-control" placeholder="Ingrese Nombre Establecimiento">
+                </div>
+                <div class="col-md-4">
+                    <label for="inp_tipo_est">Tipo de Establecimiento</label>
+                    <select id="inp_tipo_est" class="form-select">
+                        <option value="0">Seleccione tipo</option>
+                        <option value="1">Establecimiento / Escuela Especial</option>
+                        <option value="2">Ens. Básica Publico-Privado</option>
+                        <option value="3">Ens. Media Publico-Privado</option>
+                        <option value="4">Instituto Técnico-Profesional</option>
+                        <option value="5">Universidad</option>
+    
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inp_ult_curso">Ultimo Curso Aprobado</label>
+                    <input type="text" id="inp_ult_curso" class="form-control" placeholder="4to Medio">
+                </div>
+            </div>
+        </div>
+        <!-- End EDUCACIÓN -->
+        <!-- TRABAJO -->
+        <h2 class="title p-2">trabajo</h2>
+        <div class="col-md-12 border p-2 mb-2">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-warning" role="alert">
+                        Si deja el campo en blanco, se asume que no está trabajando.
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="inp_nom_trabajo">Nombre Actual Trabajo</label>
+                    <input type="text" id="inp_nom_trabajo" class="form-control" placeholder="Ejem: Municipalidad de Pichidegua">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkOMIL">
+                        <label class="form-check-label" for="checkOMIL">
+                          ¿Registado en OMIL?
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End TRABAJO -->
+        <!-- ORGANIZACIONES -->
+        <h2 class="title p-2">organizaciones</h2>
+        <div class="col-md-12 border p-2 mb-2">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inp_nom_org">Nombre Organización PcD</label>
+                    <input type="text" id="inp_nom_org" class="form-control" placeholder="Ingrese nombre ORG">
+                </div>
+                <div class="col-md-4">
+                    <label for="inp_nom_cargo">Cargo</label>
+                    <input type="text" id="inp_nom_cargo" class="form-control" placeholder="Ingrese cargo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inp_nom_org">Nombre Presidente Organización PcD</label>
+                    <input type="text" id="inp_p_nom_org" class="form-control" placeholder="Ingrese nombre ORG">
+                </div>
+                <div class="col-md-4">
+                    <label for="inp_nom_cargo">Contacto Presidente</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="addon-wrapping">+569</span>
+                        <input type="number" id="inp_tel" class="form-control" placeholder="12345678">
+                        <!-- <input type="text" id="in⁄putSearchbyRut" class="form-control"  formControlName="rut" placeholder="12345678-9" aria-label="RUT" aria-describedby="addon-wrapping"> -->
+                      </div>
+                </div>
+            </div>
+        </div>
+        <!-- End ORGANIZACIONES -->
+        <!-- TECNOLOGÍA -->
+        <h2 class="title p-2">tecnología</h2>
+        <div class="col-md-12 border p-2 mb-2">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkRND" (change)="rnd($event.target)">
+                        <label class="form-check-label" for="checkRND">
+                          ¿Tiene acceso a internet?
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkRND" (change)="rnd($event.target)">
+                        <label class="form-check-label" for="checkRND">
+                          ¿Sabe utilizar dispositivos tecnológicos?
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkRND" (change)="rnd($event.target)">
+                        <label class="form-check-label" for="checkRND">
+                          ¿Requiere ayuda para utilizar dispositivos o acceder a intenert?
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="inp_disp">Dispositivos Electrónicos</label> <br>
+                    <p-chips id="inp_disp" separator="," placeholder="Ej: PC, Telé  fono"></p-chips> <br>
+                    <label class="form-text">Separado por coma</label>
+                </div>
+            </div>
+        </div>
+        <!-- End TECNOLOGÍA -->
+        <div class="col-md-12 text-end mb-2">
+            <button class="btn btn-primary"> <i class="fa-solid fa-floppy-disk"></i> Guardar</button>
         </div>
     </div>
-    <!-- End CUIDADORA -->
-    <!-- SALUD -->
-    <h2 class="title p-2">Salud</h2>
-    <div class="col-md-12 border p-2 mb-2">
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_tipo_disc">Tipo Discapacidad</label>
-                <select id="inp_tipo_disc" class="form-select">
-                    <option value="0">Seleccione ...</option>
-                </select>
-            </div>
-            <div class="col-md-4">
-                <label for="inp_level_disc">Grado</label>
-                <select id="inp_level_disc" class="form-select">
-                    <option value="0">Seleccione ...</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_atten">Centro de Atención</label>
-                <select id="inp_atten" class="form-select">
-                    <option value="0">Seleccione ...</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <label for="inp_diag">Diagnóstico</label>
-                <textarea id="inp_diag" rows="4" class="form-control" placeholder="Ingrese Diagnóstico"></textarea>
-            </div>
-        </div>
-    </div>
-    <!-- End SALUD -->
-    <!-- Social -->
-    <h2 class="title p-2">social</h2>
-    <div class="col-md-12 border p-2 mb-2">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="checkRND" (change)="rnd($event.target)">
-                    <label class="form-check-label" for="checkRND">
-                      ¿Tiene RND?
-                    </label>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="checkRSH" (change)="rsh($event.target)">
-                    <label class="form-check-label" for="checkRSH">
-                      ¿Tiene RSH?
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4" *ngIf="viewRND">
-                <label for="inp_rnd">Nro. Registro Nacional de Discapacidad</label>
-                <input type="number" id="inp_rnd" class="form-control" placeholder="12345">
-            </div>
-            <div class="col-md-4" *ngIf="viewRSH">
-                <label for="inp_rnd">% Registro Nacional de Hogares</label>
-                <div class="input-group">
-                    <input type="number" id="inp_rnd" class="form-control" placeholder="15" min="0" max="100">
-                    <span class="input-group-text" id="addon-wrapping">%</span>
-                  </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="checkPension">
-                    <label class="form-check-label" for="checkPension">
-                      Pensión por invalidez
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End SOCIAL -->
-    <!-- EDUCACIÓN -->
-    <!-- TODO: Revisar -->
-    <h2 class="title p-2">educación</h2>
-    <div class="col-md-12 border p-2 mb-2">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-warning" role="alert">
-                    Si deja el campo en blanco, se asume que no se encuentra estudiando.
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="checkStudy">
-                    <label class="form-check-label" for="checkStudy">
-                      ¿Estudia?
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_level_study">Nivel de Estudio</label>
-                <input type="text" id="inp_level_study" class="form-control" placeholder="Ingrese nivel de estudio del paciente">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_nomb_est">Nombre Establecimiento</label>
-                <input type="text" id="inp_nomb_est" class="form-control" placeholder="Ingrese Nombre Establecimiento">
-            </div>
-            <div class="col-md-4">
-                <label for="inp_tipo_est">Tipo de Establecimiento</label>
-                <select id="inp_tipo_est" class="form-select">
-                    <option value="0">Seleccione tipo</option>
-                    <option value="1">Establecimiento / Escuela Especial</option>
-                    <option value="2">Ens. Básica Publico-Privado</option>
-                    <option value="3">Ens. Media Publico-Privado</option>
-                    <option value="4">Instituto Técnico-Profesional</option>
-                    <option value="5">Universidad</option>
-
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_ult_curso">Ultimo Curso Aprobado</label>
-                <input type="text" id="inp_ult_curso" class="form-control" placeholder="4to Medio">
-            </div>
-        </div>
-    </div>
-    <!-- End EDUCACIÓN -->
-    <!-- TRABAJO -->
-    <h2 class="title p-2">trabajo</h2>
-    <div class="col-md-12 border p-2 mb-2">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-warning" role="alert">
-                    Si deja el campo en blanco, se asume que no está trabajando.
-                </div>
-            </div>
-            <div class="col-md-4">
-                <label for="inp_nom_trabajo">Nombre Actual Trabajo</label>
-                <input type="text" id="inp_nom_trabajo" class="form-control" placeholder="Ejem: Municipalidad de Pichidegua">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="checkOMIL">
-                    <label class="form-check-label" for="checkOMIL">
-                      ¿Registado en OMIL?
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End TRABAJO -->
-    <!-- ORGANIZACIONES -->
-    <h2 class="title p-2">organizaciones</h2>
-    <div class="col-md-12 border p-2 mb-2">
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_nom_org">Nombre Organización PcD</label>
-                <input type="text" id="inp_nom_org" class="form-control" placeholder="Ingrese nombre ORG">
-            </div>
-            <div class="col-md-4">
-                <label for="inp_nom_cargo">Cargo</label>
-                <input type="text" id="inp_nom_cargo" class="form-control" placeholder="Ingrese cargo">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <label for="inp_nom_org">Nombre Presidente Organización PcD</label>
-                <input type="text" id="inp_p_nom_org" class="form-control" placeholder="Ingrese nombre ORG">
-            </div>
-            <div class="col-md-4">
-                <label for="inp_nom_cargo">Contacto Presidente</label>
-                <div class="input-group">
-                    <span class="input-group-text" id="addon-wrapping">+569</span>
-                    <input type="number" id="inp_tel" class="form-control" placeholder="12345678">
-                    <!-- <input type="text" id="in⁄putSearchbyRut" class="form-control"  formControlName="rut" placeholder="12345678-9" aria-label="RUT" aria-describedby="addon-wrapping"> -->
-                  </div>
-            </div>
-        </div>
-    </div>
-    <!-- End ORGANIZACIONES -->
-    <!-- TECNOLOGÍA -->
-    <h2 class="title p-2">tecnología</h2>
-    <div class="col-md-12 border p-2 mb-2">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="checkRND" (change)="rnd($event.target)">
-                    <label class="form-check-label" for="checkRND">
-                      ¿Tiene acceso a internet?
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="checkRND" (change)="rnd($event.target)">
-                    <label class="form-check-label" for="checkRND">
-                      ¿Sabe utilizar dispositivos tecnológicos?
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="checkRND" (change)="rnd($event.target)">
-                    <label class="form-check-label" for="checkRND">
-                      ¿Requiere ayuda para utilizar dispositivos o acceder a intenert?
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <label for="inp_disp">Dispositivos Electrónicos</label> <br>
-                <p-chips id="inp_disp" separator="," placeholder="Ej: PC, Telé  fono"></p-chips> <br>
-                <label class="form-text">Separado por coma</label>
-            </div>
-        </div>
-    </div>
-    <!-- End TECNOLOGÍA -->
-    <div class="col-md-12 text-end mb-2">
-        <button class="btn btn-primary"> <i class="fa-solid fa-floppy-disk"></i> Guardar</button>
-    </div>
-</div>
-
-
 <!-- <app-resume-record></app-resume-record> -->
